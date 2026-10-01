@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ВКР 2026 — Автоматизация школьных звонков</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            line-height: 1.6;
+            color: #1a1a1a;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            padding: 20px;
+        }
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            background: #fff;
+            border-radius: 16px;
+            box-shadow: 0 20px 60px rgba(0,0,0,0.3);
+            overflow: hidden;
+        }
+        header {
+            background: linear-gradient(135deg, #4c51bf 0%, #6b46c1 100%);
+            color: #fff;
+            padding: 48px 40px;
+            text-align: center;
+        }
+        header h1 {
+            font-size: 2rem;
+            margin-bottom: 12px;
+            font-weight: 700;
+        }
+        header .subtitle {
+            opacity: 0.9;
+            font-size: 1.05rem;
+        }
+        .badge {
+            display: inline-block;
+            background: rgba(255,255,255,0.2);
+            padding: 6px 14px;
+            border-radius: 20px;
+            font-size: 0.85rem;
+            margin-top: 16px;
+            backdrop-filter: blur(10px);
+        }
+        main { padding: 40px; }
+        section { margin-bottom: 36px; }
+        h2 {
+            font-size: 1.4rem;
+            color: #4c51bf;
+            margin-bottom: 16px;
+            padding-bottom: 8px;
+            border-bottom: 2px solid #e2e8f0;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        p { margin-bottom: 12px; color: #2d3748; }
+        ul { list-style: none; padding-left: 0; }
+        ul li {
+            padding: 10px 0 10px 32px;
+            position: relative;
+            border-bottom: 1px solid #f0f0f0;
+        }
+        ul li:last-child { border-bottom: none; }
+        ul li::before {
+            content: "▸";
+            position: absolute;
+            left: 10px;
+            color: #667eea;
+            font-weight: bold;
+        }
+        .checklist li::before {
+            content: "☐";
+            color: #a0aec0;
+            font-size: 1.1rem;
+        }
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+            gap: 16px;
+            margin-top: 16px;
+        }
+        .card {
+            background: #f7fafc;
+            border-left: 4px solid #667eea;
+            padding: 16px 20px;
+            border-radius: 8px;
+        }
+        .card h3 {
+            font-size: 1rem;
+            color: #4c51bf;
+            margin-bottom: 6px;
+        }
+        .card p { font-size: 0.9rem; margin: 0; color: #4a5568; }
+        .highlight {
+            background: #fef5e7;
+            border-left: 4px solid #ed8936;
+            padding: 16px 20px;
+            border-radius: 8px;
+            margin-top: 12px;
+        }
+        footer {
+            text-align: center;
+            padding: 24px;
+            background: #f7fafc;
+            color: #718096;
+            font-size: 0.9rem;
+            border-top: 1px solid #e2e8f0;
+        }
+        code {
+            background: #edf2f7;
+            padding: 2px 8px;
+            border-radius: 4px;
+            font-family: 'Monaco', 'Consolas', monospace;
+            font-size: 0.9em;
+            color: #4c51bf;
+        }
+        @media (max-width: 600px) {
+            header { padding: 32px 20px; }
+            header h1 { font-size: 1.5rem; }
+            main { padding: 24px 20px; }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>🔔 Автоматизация школьных звонков</h1>
+            <div class="subtitle">Выпускная квалификационная работа · 2026</div>
+            <div class="badge">Arduino · Web · IoT</div>
+        </header>
+
+        <main>
+            <section>
+                <h2>📌 О проекте</h2>
+                <p>Проект посвящён автоматизации системы школьных звонков на базе микроконтроллера <strong>Arduino</strong> с интеграцией в существующую советскую инфраструктуру, управляемую обычным выключателем света.</p>
+                <p>Система позволяет удалённо управлять расписанием и запуском звонков через веб-интерфейс, сохраняя возможность ручного управления через штатный выключатель.</p>
+            </section>
+
+            <section>
+                <h2>🎯 Что я хочу получить</h2>
+                <ul>
+                    <li>Готовая система на <strong>Arduino</strong>, работающая в реальных условиях школы</li>
+                    <li>Совместимость со старой советской системой звонков с выключателем света</li>
+                    <li>Удалённое управление через <strong>веб-интерфейс</strong></li>
+                    <li>Гибкий режим: автоматический + ручной</li>
+                </ul>
+            </section>
+
+            <section>
+                <h2>🛠 Что нужно сделать</h2>
+                <ul class="checklist">
+                    <li>Разработать схему подключения Arduino</li>
+                    <li>Написать код программы</li>
+                    <li>Составить описание проекта</li>
+                    <li>Реализовать веб-интерфейс управления</li>
+                    <li>Внедрить в образовательном учреждении г. Ижевска</li>
+                </ul>
+            </section>
+
+            <section>
+                <h2>🧰 Стек технологий</h2>
+                <div class="grid">
+                    <div class="card">
+                        <h3>Микроконтроллер</h3>
+                        <p>Arduino Uno / Nano / ESP32</p>
+                    </div>
+                    <div class="card">
+                        <h3>Связь</h3>
+                        <p>Wi-Fi / Ethernet (ESP8266, W5100)</p>
+                    </div>
+                    <div class="card">
+                        <h3>Веб-интерфейс</h3>
+                        <p>HTML · CSS · JavaScript</p>
+                    </div>
+                    <div class="card">
+                        <h3>Управление нагрузкой</h3>
+                        <p>Реле / оптрон / симистор</p>
+                    </div>
+                </div>
+            </section>
+
+            <section>
+                <h2>📍 Место внедрения</h2>
+                <div class="highlight">
+                    Одно из образовательных учреждений <strong>г. Ижевска</strong>, Удмуртская Республика.
+                </div>
+            </section>
+        </main>
+
+        <footer>
+            ВКР 2026 · <a href="https://github.com/" style="color: #4c51bf;">GitHub Repository</a>
+        </footer>
+    </div>
+</body>
+</html>
